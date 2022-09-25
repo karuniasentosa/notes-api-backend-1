@@ -1,3 +1,5 @@
 /node_modules/
 /notes-api-webserver.pem
 /.idea/
+/.env
+/.prod.env

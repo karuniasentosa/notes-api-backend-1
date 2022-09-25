@@ -6,7 +6,7 @@ class NotesService {
   constructor() {
     this._notes = [];
   }
-
+     
   addNote({ title, body, tags }) {
     const id = nanoid(16);
     const createdAt = new Date().toISOString();
