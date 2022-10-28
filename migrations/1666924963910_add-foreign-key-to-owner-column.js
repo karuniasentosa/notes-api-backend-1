@@ -5,7 +5,7 @@ exports.shorthands = undefined;
 exports.up = (pgm) => {
   // Membuat user baru
   pgm.sql('INSERT INTO '
-    + 'users(id, username, password, "fullName") '
+    + 'users(id, username, password, "fullname") '
     + 'VALUES (\'old_notes\', \'old_notes\', \'old_notes\', \'old notes\')');
 
   // Mengubah nilai owner pada note yang owner-nya bernilai NULL

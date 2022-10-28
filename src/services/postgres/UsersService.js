@@ -10,7 +10,7 @@ class UsersService {
     this._pool = new Pool();
   }
 
-  async addUser({ username, password, fullName }) {
+  async addUser({ username, password, fullname }) {
     await this.verifyUsername(username);
 
     const id = `user-${nanoid(16)}`;
@@ -18,7 +18,7 @@ class UsersService {
 
     const query = {
       text: 'INSERT INTO users VALUES($1, $2, $3, $4) RETURNING id',
-      values: [id, username, passwordHash, fullName],
+      values: [id, username, passwordHash, fullname],
     };
 
     const result = await this._pool.query(query);
